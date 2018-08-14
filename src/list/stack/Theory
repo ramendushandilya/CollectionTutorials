@@ -1,0 +1,9 @@
+* Extends Vector class
+
+* Methods
+    . empty() - Tests if the stack is empty
+    . peek()  - Looks at the top of the stack without removing it from stack
+    . pop()   - Removes the top object of the stack returns that object as the value
+    . push()  - Pushes item at top of the stack
+    . search()- Returns 1-based position where an object is on this stack
+

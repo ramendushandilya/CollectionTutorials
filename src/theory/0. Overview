@@ -1,0 +1,160 @@
+* Collections APIs provide a set of classes and interface which make it easier to handle collections of objects.
+
+* Loosely speaking collections work a bit like arrays, except their size is dynamic and and they have more advanced features
+
+* Most of the collections are located in the java.util package. Java also has a set of concurrent collections in the java.util.concurrent package
+
+Collections Overview
+---------------------
+* There are two groups of interfaces Collections and Maps
+
+Iterable
+--------
+* The Iterable interface (java.lang.Iterable) is one of the root interfaces of the Java collection classes.
+* The Collection interface extends the Iterable, so all subtypes of Collection also implement Iterable interface.
+
+* A class which implements Iterable interface can be used with the new for loop
+
+* The Iterable interface has only one method,
+
+    public interface Iterable<T> {
+
+        public Iterator<T> iterator();
+    }
+
+* The Collection interface (java.util.Collection) is one of the root interfaces of the Java collection classes.
+
+* Even though we don't instantiate a Collection directly, rather a subtype of Collection, we may often treat these subtypes uniformly as a Collection.
+
+Collection Subtypes
+-------------------
+* The following interfaces (collection types) extends the Collection interface
+    . List
+    . Set
+    . Sorted Set
+    . NavigableSet
+    . Queue
+    . Deque
+
+* Java doesn't come with a usable implementation of the Collection interfaces, so we use on of the listed subtypes.
+
+* The collection interface just defines a set of methods (behavior) that each of these collection subtypes share.
+
+* Some of the methods of Collection interface
+    . add(E e)
+    . addAll(Collection <? extends E> c)
+    . clear()
+    . contains(Object o)
+    . containsAll(Collection <?> c)
+    . equals(Object o)
+    . hashCode()
+    . isEmpty()
+    . iterator()
+    . remove(Object o)
+    . removeAll(Collection<?> c)
+    . retainAll(Collection<?> c)
+    . size()
+    . toArray()
+    . toArray(T[] a)
+
+
+List
+----
+* Below are the List implementations in Java
+    . ArrayList
+    . LinkedList
+    . Vector
+    . Stack
+
+Set
+---
+* No duplicates allowed
+
+* Below are the implementations of Set
+    . EnumSet
+    . HashSet
+    . LinkedHashSet
+    . TreeSet
+
+SortedSet
+---------
+* SortedSet interface is a subtype of Set interface. It behaves like a normal set plus the elements are sorted internally
+
+* When elements in a sorted set are iterated they are returned in sorted order
+
+* The order of sorting is either natural sorting order of the elements (if they implement Comparable) or the order is determined by the Comparator provided
+
+* Implementation of SortedSet
+    . TreeSet
+
+NavigableSet
+------------
+* It is a subtype of SortedSet interface. It behaves like SortedSet plus we have the navigation methods available in addition to sorting methods
+
+* Below are the Implementations of NavigableSet
+    . TreeSet
+
+Map
+---
+* The java.util.Map interface represents a mapping between a key and a value
+
+* The Map interface is not a subtype of the Collection interface. It behaves a bit different from the rest of the collection types
+
+* Below are the Map implementations
+    . HashMap
+    . HashTable
+    . EnumMap
+    . IdentityHashMap
+    . LinkedHashMap
+    . Properties
+    . TreeMap
+    . WeakHashMap
+
+SortedMap
+---------
+* The SortedMap interface is a subtype of the Map interface, with the addition that the elements are sorted in the map
+
+* There is one implementation of the SortedMap interface
+    . TreeMap
+
+NavigableMap
+------------
+* NavigableMap interface is a subtype of the SortedMap interface.
+
+* It has a few extensions to the SortedSet which makes it possible to navigate the map.
+
+* There is one implementation of the NavigableMap
+    . TreeMap
+
+Queue
+-----
+* Queue interface is a subtype of the Collection interface
+
+* Below are the implementations of the Queue in Java
+    . LinkedList
+    . PriorityQueue
+
+Deque
+-----
+* Deque interface is a subtype of the Queue interface.
+
+* It represents a Queue where you can insert and remove elements from both ends of the quue
+
+* Below are the implementations of the Deque
+    . ArrayDeque
+    . LinkedList
+
+Stack
+-----
+* Stack class is an implementation of the List interface
+
+hashCode() and equals()
+-----------------------
+* The methods hashCode() and equals() play a distinct role in the objects you insert into Java Collections.
+
+Collection Sorting
+------------------
+
+Collection Stream
+-----------------
+

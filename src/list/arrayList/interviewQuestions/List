@@ -1,0 +1,41 @@
+
+Q1. How to remove duplicates from ArrayList in Java
+
+A1. List to Set (LinkedHashSet to maintain insertion order) to List again
+
+Q2. How to reverse ArrayList ?
+
+A2. Collections.reverse();
+
+Q3. Difference between Array and ArrayList?
+
+A3. EASY
+
+Q4. How to synchronise ArrayList?
+
+A4. ArrayList is not Synchronised, hence not thread safe. By using Collections.synchronizedList() method
+
+Q5. When to use ArrayList and LinkedList?
+A5. EASY
+
+Q6. Difference between Vector and ArrayList?
+A6. Vector is thread safe, ArrayList is not
+
+Q7. Create and initialise ArrayList in one line?
+A7. Arrays.asList();
+
+Q8. CopyOnWriteArrayList?
+A8. It's a concurrent class which is introduced as an alternative of Synchronised list in Java.
+It achieves thread safety in a slightly different way. CopyOnWriteArrayList creates a copy of underlying ArrayList with every mutation operation
+add, remove etc. That's why it's suitable for values which are read frequently rather than modified.
+
+Iterator of CopyOnWriteArrayList is fail safe and doesn't throw ConcurrentModificationException even if underlying CopyOnWriteArrayList is modified
+once iteration begins because the iterator is operating on a separate copy of ArrayList. Thus, all the updates made on CopyOnWriteArrayList is not available
+to iterator.
+
+add, remove is not supported by CopyOnWriteArrayList iterator.
+
+Q9. How to make Collection like ArrayList read only in Java?
+A9. Using Collections.unmodifiableCollection() util method. It returns a unmodifiable view of Collection in which
+you can't perform any mutation operations.
+

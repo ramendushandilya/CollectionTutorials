@@ -1,0 +1,25 @@
+* The vector class implements a growable array of objects and allows random access like the arrays
+
+* The size of the vector can grow or shrink based on the need to add or remove items even after the vector has been created
+
+* Each vector tries to optimise storage management by maintaining a "capacity" and "capacityIncrement"
+
+* The "capacity" is always at least as large as the vector size; it is usually larger because as components are added to vector, the vector storage increases in chunks of "capacityIncrement"
+
+* An application can increase the capacity of a vector before inserting a large number of components, this reduces the amount of incremental reallocation.
+
+* Vector is thread safe
+
+* Iterators returned by this class iterator and listIterator are "fail-fast"
+
+* If the vector is structurally modified anytime after the iterator is created, in any way except through iterator's own remove/add methods
+the iterator will throw "ConcurrentModificationException"
+
+* Thus in the face of CCME the iterator failed quickly and cleanly, rather than risking arb non deterministic behavior at undetermined time in future
+
+* The fail fast behavior of an iterator can not be guaranteed as it is, generally speaking, impossible to make any hard guarantees
+in the presence of unsynchronized concurrent modification. Fail fast iterators throw concurrent modification exception on a best effort basis
+There for it would be wrong to write a program that depended on this exception for its correctness, the fail fast iterators should be only used to detect bugs.
+
+* Vector is slower as compared to ArrayList / LinkedList, since Vector is synchronised, synchronisation reduces the performance
+
